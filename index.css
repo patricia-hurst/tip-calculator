@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+    --light-cyan: hsl(172, 67%, 45%);
+    --dark-cyan: hsl(183, 100%, 15%);
+    --light-gray: hsl(186, 37%, 73%);
+    --very-light-gray: hsl(189, 41%, 97%);
+    --dark-gray: hsl(180, 6%, 45%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: "Space Mono", monospace;
+    background-color: hsla(187, 50%, 79%, 0.76);
+    color: var(--dark-gray);
+}
+
+h1 {
+    text-align: center;
+    color: var(--dark-cyan);
+}
+
+h2 {
+    margin: 5px;
+    font-size: 14px;
+}
+
+.main-ctn {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* ========================================= */
+/* INPUTS 
+/* ========================================= */
+input {
+    border: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: hsl(180, 6%, 90%);
+    width: 100%;
+    text-align: right;
+    font-size: 14px;
+}
+
+input::placeholder {
+    text-align: right;
+    color: var(--dark-cyan);
+    font-weight: 900;
+}
+
+input:focus {
+    cursor: pointer;
+    outline: 2px solid var(--light-cyan);
+}
+
+.input-ctn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.input-ctn .icon {
+    position: absolute;
+    padding: 9px;
+}
+
+#custom {
+    width: calc(100% - 10px);
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#custom::placeholder {
+    color: var(--dark-gray);
+    text-align: center;
+    font-weight: 700;
+}
+
+/* ========================================= */
+/* TIP BUTTONS SECTION
+/* ========================================= */
+.tip-btn-ctn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+button:hover {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.tip-btn {
+    background-color: var(--dark-cyan);
+    color: white;
+    margin: 5px;
+}
+
+.tip-btn:hover {
+    background-color: var(--light-cyan);
+    color: var(--dark-cyan);
+}
+
+.reset-btn {
+    background-color: var(--light-cyan);
+    color: var(--dark-cyan);
+    font-weight: bolder;
+    width: 100%;
+}
+
+.reset-btn:hover {
+    background-color: hsl(180, 6%, 45%);
+    color: white;
+}
+
+.error-msg {
+    display: none;
+    color: red;
+    float: right;
+}
+
+/* ========================================= */
+/* TOTALS / MONEY SECTION
+/* ========================================= */
+.totals-ctn {
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.totals-ctn .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.totals-ctn .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.totals-ctn .subtext {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark-gray);
+}
+
+.totals-ctn .money {
+    color: var(--light-cyan);
+    font-weight: bold;
+    font-size: 24px;
+    text-align: right;
+}
+
+.attribution {
+    text-align: center;
+}
+
+/* ========================================= */
+/* TABLET / DESKTOP STYLES
+/* ========================================= */
+@media only screen and (min-width: 768px) {
+    .main-ctn {
+        width: 50%;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .main-ctn {
+        width: 60%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+        padding: 30px;
+    }
+
+    .desktop-left {
+        display: grid;
+    }
+
+    .input-ctn {
+        margin-bottom: 0px;
+    }
+
+    .tip-btn-ctn {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .totals-ctn {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .totals-ctn .reset-btn {
+        align-self: end;
+        height: 50px;
+    }
+
+    .attribution {
+        grid-column: 1 / 3;
+    }
+}

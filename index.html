@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+    <h1>SPLI<br>TTER</h1>
+    <div class="main-ctn">
+        <div class="desktop-left">
+            <h2>Bill</h2>
+            <div class="input-ctn">
+                <img src="/practice-projects/tip-calculator/images/icon-dollar.svg" alt="dollar" class="icon" />
+                <input type="number" id="bill-amount" name="bill-amount" placeholder="0.00" />
+            </div>
+            <div class="tips-ctn">
+                <h2>Select Tip %</h2>
+                <div class="tip-btn-ctn">
+                    <button class="tips tip-btn">5%</button>
+                    <button class="tips tip-btn">10%</button>
+                    <button class="tips tip-btn">15%</button>
+                    <button class="tips tip-btn">25%</button>
+                    <button class="tips tip-btn">50%</button>
+                    <input type="number" step="1" id="custom" name="custom" placeholder="Custom" />
+                </div>
+            </div>
+            <h2 class="people">Number of People<span class="error-msg">Must be a whole number >= 1</span></h2>
+            <div class="input-ctn">
+                <img src="/practice-projects/tip-calculator/images/icon-person.svg" alt="person" class="icon" />
+                <input type="number" step="1" id="number-people" name="number-people" placeholder="1" />
+            </div>
+        </div>
+        <div class="desktop-right">
+            <div class="totals-ctn">
+                <div class="row">
+                    <div class="column">
+                        <p>Tip Amount<span class="subtext">/ person</span></p>
+                        <p>Total<span class="subtext">/ person</span></p>
+                    </div>
+                    <div class="column">
+                        <p class="money tip-per">$0.00</p>
+                        <p class="money total-per">$0.00</p>
+                    </div>
+                </div>
+                <button class="reset-btn">RESET</button>
+            </div>
+        </div>
+        <div class="attribution">
+            Challenge by
+            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+                href="#">Patricia Hurst</a>.
+        </div>
+        <script src="index.js"></script>
+</body>
+
+</html>
